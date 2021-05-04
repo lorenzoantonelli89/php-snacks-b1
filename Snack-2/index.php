@@ -21,7 +21,7 @@
             $hasAt = strpos($mail, '@');
 
 
-            if(strlen($name) > 3 && ($hasAt === false || $hasDot === false) && is_numeric($age)){
+            if(strlen($name) < 3 || $hasAt === false || $hasDot === false || !is_numeric($age)){
                 echo 'Accesso Negato';
             }else{
                 echo 'Accesso Riuscito';
